@@ -9,7 +9,7 @@ from gym_management_system import __version__ as version
 setup(
 	name="gym_management_system",
 	version=version,
-	description="An app for gyms",
+	description="An App for gym\'s",
 	author="Sandeep Kakde",
 	author_email="sandeep@agkiya.com",
 	packages=find_packages(),

@@ -1,6 +1,6 @@
 ## Gym Management System
 
-An app for gyms
+An App for gym's
 
 #### License
 

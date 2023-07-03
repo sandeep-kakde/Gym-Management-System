@@ -1,7 +1,7 @@
 app_name = "gym_management_system"
 app_title = "Gym Management System"
 app_publisher = "Sandeep Kakde"
-app_description = "An app for gyms"
+app_description = "An App for gym\'s"
 app_email = "sandeep@agkiya.com"
 app_license = "MIT"
 # required_apps = []
