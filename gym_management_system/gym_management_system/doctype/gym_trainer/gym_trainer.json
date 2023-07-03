@@ -11,7 +11,8 @@
   "column_break_hbtl",
   "last_name",
   "email",
-  "ratings"
+  "ratings",
+  "trainer_image"
  ],
  "fields": [
   {
@@ -31,6 +32,7 @@
    "fieldname": "phone",
    "fieldtype": "Phone",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Phone",
    "reqd": 1
   },
@@ -47,6 +49,7 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email",
    "options": "Email",
    "reqd": 1
@@ -55,11 +58,18 @@
    "fieldname": "ratings",
    "fieldtype": "Rating",
    "label": "Ratings"
+  },
+  {
+   "fieldname": "trainer_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Trainer Image"
   }
  ],
+ "image_field": "trainer_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-03 23:58:09.064044",
+ "modified": "2023-07-04 00:27:11.897327",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer",
@@ -78,7 +88,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }
