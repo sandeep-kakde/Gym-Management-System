@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-04 00:04:45.392659",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exercise_name",
+  "sets",
+  "column_break_uvxr",
+  "repetitions",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "exercise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sets",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sets"
+  },
+  {
+   "fieldname": "column_break_uvxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repetitions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Repetitions"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-04 00:09:29.168051",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Workout Plan Exercise",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
