@@ -1,27 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-03 23:58:51.613295",
+ "creation": "2023-07-04 12:52:00.520428",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "member",
-  "subscription_start_date",
-  "column_break_qugs",
-  "trainer",
-  "subscription_end_date",
-  "amended_from"
+  "weight_kgs",
+  "calories_intake",
+  "column_break_xavm",
+  "date",
+  "exercise_duration",
+  "heart_rate"
  ],
  "fields": [
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Gym Trainer Subscription",
-   "print_hide": 1,
-   "read_only": 1
-  },
   {
    "fieldname": "member",
    "fieldtype": "Link",
@@ -31,39 +23,49 @@
    "reqd": 1
   },
   {
-   "fieldname": "subscription_start_date",
-   "fieldtype": "Date",
+   "fieldname": "weight_kgs",
+   "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Subscription Start Date",
+   "label": "Weight (KGs)",
+   "non_negative": 1,
    "reqd": 1
   },
   {
-   "fieldname": "column_break_qugs",
+   "fieldname": "calories_intake",
+   "fieldtype": "Float",
+   "label": "Calories Intake"
+  },
+  {
+   "fieldname": "column_break_xavm",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "trainer",
-   "fieldtype": "Link",
+   "fieldname": "date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Trainer",
-   "options": "Gym Trainer",
+   "label": "Date",
    "reqd": 1
   },
   {
-   "fieldname": "subscription_end_date",
-   "fieldtype": "Date",
+   "fieldname": "exercise_duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
    "in_list_view": 1,
-   "label": "Subscription End Date",
+   "label": "Exercise Duration",
    "reqd": 1
+  },
+  {
+   "fieldname": "heart_rate",
+   "fieldtype": "Int",
+   "label": "Heart Rate"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-07-04 13:29:54.026840",
+ "modified": "2023-07-04 13:33:03.027270",
  "modified_by": "Administrator",
  "module": "Gym Management System",
- "name": "Gym Trainer Subscription",
+ "name": "Fitness Metrics",
  "owner": "Administrator",
  "permissions": [
   {
@@ -100,15 +102,6 @@
    "role": "Gym Member",
    "share": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Gym Trainer",
-   "share": 1
   }
  ],
  "sort_field": "modified",

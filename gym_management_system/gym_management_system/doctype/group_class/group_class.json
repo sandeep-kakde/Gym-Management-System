@@ -1,69 +1,72 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-03 23:48:58.549130",
+ "creation": "2023-07-04 13:21:15.097755",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "membership_plan_name",
-  "duration_in_months",
-  "column_break_xivq",
-  "price",
-  "active",
-  "section_break_hwtn",
-  "description"
+  "class_name",
+  "instructor",
+  "duration",
+  "column_break_smyv",
+  "class_type",
+  "schedule",
+  "maximum_capacity"
  ],
  "fields": [
   {
-   "fieldname": "membership_plan_name",
+   "fieldname": "class_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Membership Plan Name",
+   "label": "Class Name",
    "reqd": 1
   },
   {
-   "fieldname": "duration_in_months",
-   "fieldtype": "Int",
-   "hide_days": 1,
+   "fieldname": "instructor",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Duration (in months)",
-   "non_negative": 1,
+   "label": "Instructor",
+   "options": "Gym Trainer",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_xivq",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "column_break_smyv",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "price",
-   "fieldtype": "Float",
+   "fieldname": "class_type",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Price",
-   "non_negative": 1,
+   "label": "Class Type",
+   "options": "Dance\nYoga",
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "active",
-   "fieldtype": "Check",
-   "label": "Active"
+   "fieldname": "schedule",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Schedule",
+   "reqd": 1
   },
   {
-   "fieldname": "section_break_hwtn",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
+   "fieldname": "maximum_capacity",
+   "fieldtype": "Int",
+   "label": "Maximum Capacity",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-04 13:29:29.088573",
+ "modified": "2023-07-04 13:33:37.243244",
  "modified_by": "Administrator",
  "module": "Gym Management System",
- "name": "Gym Membership",
+ "name": "Group Class",
  "owner": "Administrator",
  "permissions": [
   {
@@ -91,15 +94,13 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gym Member",
-   "share": 1,
-   "write": 1
+   "role": "Gym Trainer",
+   "share": 1
   }
  ],
  "sort_field": "modified",
