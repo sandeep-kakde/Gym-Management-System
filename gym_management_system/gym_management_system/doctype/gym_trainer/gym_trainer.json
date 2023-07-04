@@ -57,7 +57,8 @@
   {
    "fieldname": "ratings",
    "fieldtype": "Rating",
-   "label": "Ratings"
+   "label": "Ratings",
+   "read_only": 1
   },
   {
    "fieldname": "trainer_image",
@@ -69,7 +70,7 @@
  "image_field": "trainer_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-04 13:31:35.548129",
+ "modified": "2023-07-04 16:06:39.880961",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer",

@@ -7,21 +7,13 @@
  "field_order": [
   "member",
   "subscription_start_date",
+  "trainer_rating",
   "column_break_qugs",
   "trainer",
   "subscription_end_date",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Gym Trainer Subscription",
-   "print_hide": 1,
-   "read_only": 1
-  },
   {
    "fieldname": "member",
    "fieldtype": "Link",
@@ -55,12 +47,26 @@
    "in_list_view": 1,
    "label": "Subscription End Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "trainer_rating",
+   "fieldtype": "Rating",
+   "label": "Trainer Rating"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Trainer Subscription",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-04 13:29:54.026840",
+ "modified": "2023-07-04 16:05:27.376349",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Trainer Subscription",
@@ -99,6 +105,7 @@
    "report": 1,
    "role": "Gym Member",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {

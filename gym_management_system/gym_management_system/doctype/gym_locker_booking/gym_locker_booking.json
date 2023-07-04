@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2023-07-04 00:01:01.590966",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -26,6 +26,7 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Member",
    "options": "Gym Member",
    "reqd": 1
@@ -59,10 +60,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-04 13:30:20.015185",
+ "modified": "2023-07-04 15:53:07.673102",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker Booking",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:membership_plan_name",
  "creation": "2023-07-03 23:48:58.549130",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -19,7 +20,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Membership Plan Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "duration_in_months",
@@ -36,7 +38,7 @@
   },
   {
    "fieldname": "price",
-   "fieldtype": "Float",
+   "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Price",
    "non_negative": 1,
@@ -60,10 +62,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-04 13:29:29.088573",
+ "modified": "2023-07-04 14:45:22.298736",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Membership",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

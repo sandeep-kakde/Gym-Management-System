@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:class_name",
  "creation": "2023-07-04 13:21:15.097755",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -19,7 +20,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Class Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "instructor",
@@ -32,6 +34,7 @@
   {
    "fieldname": "duration",
    "fieldtype": "Duration",
+   "hide_days": 1,
    "label": "Duration"
   },
   {
@@ -63,10 +66,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-04 13:33:37.243244",
+ "modified": "2023-07-04 16:29:35.964828",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -103,7 +107,9 @@
    "share": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "class_name"
 }

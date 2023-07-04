@@ -5,23 +5,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "class",
+  "class_name",
   "booking_date",
   "column_break_xpin",
   "customer",
   "booking_time",
-  "status",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "class",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Class",
-   "options": "Group Class",
-   "reqd": 1
-  },
   {
    "fieldname": "booking_date",
    "fieldtype": "Date",
@@ -35,9 +26,10 @@
   },
   {
    "fieldname": "customer",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Customer",
+   "options": "Gym Member",
    "reqd": 1
   },
   {
@@ -48,13 +40,6 @@
    "reqd": 1
   },
   {
-   "default": "Waitlisted",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Waitlisted\nConfirmed"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -62,12 +47,20 @@
    "options": "Group Class Booking",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class name",
+   "options": "Group Class",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-04 13:28:42.269094",
+ "modified": "2023-07-04 16:38:18.747696",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class Booking",
