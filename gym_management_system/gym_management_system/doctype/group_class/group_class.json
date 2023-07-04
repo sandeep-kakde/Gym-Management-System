@@ -43,10 +43,10 @@
   },
   {
    "fieldname": "class_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Class Type",
-   "options": "Dance\nYoga",
+   "options": "Group Class Type",
    "reqd": 1
   },
   {
@@ -66,7 +66,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-04 16:29:35.964828",
+ "modified": "2023-07-05 00:23:42.791913",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Group Class",
