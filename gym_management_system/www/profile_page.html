@@ -1,0 +1,54 @@
+{% extends "templates/web.html" %} 
+{% block page_content %}
+<div class="container">
+  <div class="user-profile">
+    <h2 class="user-profile-title">
+      <i class="fas fa-user-circle"></i>{{ user_full_name }}
+    </h2>
+    <div class="user-profile-membership">
+      <i class="fas fa-check-circle"></i> Active Membership: {{ active_membership }}
+    </div>
+    <div class="user-profile-details">
+      {% if is_membership_active %}
+      <div class="subscription-info">
+        <strong>Subscription Start Date:</strong> {{ subscription_start_date }}<br>
+        <strong>Subscription End Date:</strong> {{ subscription_end_date }}<br>
+        <strong>Days Remaining:</strong> {{ days_remaining }}
+      </div>
+      {% else %}
+      <div class="subscription-info">
+        Please contact the gym admin for a new membership.
+      </div>
+      {% endif %}
+
+      {% if trainer_subscriptions %}
+      <div class="trainer-info mt-4">
+        <h5>Current Trainer: {{ current_trainer }}</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Trainer Name</th>
+                <th>Subscription Start Date</th>
+                <th>Subscription End Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for trainer_subscription in trainer_subscriptions %}
+              <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ trainer_subscription.trainer }}</td>
+                <td>{{ trainer_subscription.subscription_start_date }}</td>
+                <td>{{ trainer_subscription.subscription_end_date }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
