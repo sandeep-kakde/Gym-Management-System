@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:plan_name",
  "creation": "2023-07-04 00:06:21.410429",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,7 +12,9 @@
   "section_break_vcgd",
   "description",
   "section_break_cmin",
-  "exercises"
+  "exercises",
+  "published",
+  "route"
  ],
  "fields": [
   {
@@ -19,7 +22,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Plan Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break_qanm",
@@ -50,14 +54,29 @@
    "fieldtype": "Table",
    "label": "Exercises",
    "options": "Gym Workout Plan Exercise"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "mandatory_depends_on": "eval:doc.published===1"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-07-04 13:30:57.840752",
+ "modified": "2023-07-04 21:04:56.099248",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Workout Plan",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -103,6 +122,7 @@
    "share": 1
   }
  ],
+ "route": "workout-plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

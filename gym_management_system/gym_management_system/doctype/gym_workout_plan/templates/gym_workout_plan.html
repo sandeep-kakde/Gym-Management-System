@@ -1,0 +1,46 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+    <div class="container mt-4">
+        <div class="d-flex align-items-center justify-content-between">
+            <h1 class="text-dark">Workout Plan: {{ title }}</h1>
+            <a href="/workout-plans" class="btn">
+                <span style="font-size: 20px;">
+                    &#8592;
+                </span>
+            </a>
+        </div>
+        <h6 class="text-secondary">Difficulty Level: {{ difficulty_level }}</h6>
+        <div class="mt-2 font-italic">Description: 
+            <p>{{ description }}</p>
+        </div>
+
+        <div class="table-responsive mt-4">
+            List of Exercises in this workout plan
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Exercise Name</th>
+                        <th>Sets</th>
+                        <th>Repetitions</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for exercise in exercises %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ exercise.exercise_name }}</td>
+                            <td>{{ exercise.sets }}</td>
+                            <td>{{ exercise.repetitions }}</td>
+                            <td>{{ exercise.description }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
