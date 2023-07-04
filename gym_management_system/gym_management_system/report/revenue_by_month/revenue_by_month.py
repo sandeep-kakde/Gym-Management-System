@@ -36,7 +36,7 @@ def get_data():
     revenue_by_month = {}
     for r in results:
         month = r.subscription_start_date.strftime("%B-%Y")
-        print(f"month {month}")
+
         if month not in revenue_by_month:
             revenue_by_month[month] = 0
 
