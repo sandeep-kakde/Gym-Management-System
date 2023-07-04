@@ -7,7 +7,6 @@ import frappe
 def execute(filters=None):
     columns, data = get_columns(), get_data(filters)
     chart = get_chart_data(data)
-    print(f"chart {chart}")
     return columns, data, None, chart
 
 
